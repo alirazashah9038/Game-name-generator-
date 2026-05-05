@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming Nickname Generator - Cool Gamer Names for Free Fire, PUBG, COD</title>
+<meta name="description" content="Generate 2000+ cool gaming nicknames, 500+ stylish fonts, 1000+ symbols for Free Fire, PUBG, COD, Fortnite, BGMI instantly!">
+<meta name="keywords" content="gaming nickname generator, gamer name, free fire name, pubg name, stylish name, gaming symbols">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & ROOT ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#1a6ef5;
+  --blue2:#1456c8;
+  --blueL:#e8f0fe;
+  --blueLL:#dbeafe;
+  --accent:#4a9eff;
+  --white:#fff;
+  --bg:#f8faff;
+  --bgL:#eef3ff;
+  --text:#1a1f36;
+  --muted:#64748b;
+  --border:#e2e8f0;
+  --sh1:0 2px 8px rgba(26,110,245,.08);
+  --sh2:0 4px 20px rgba(26,110,245,.13);
+  --sh3:0 8px 40px rgba(26,110,245,.18);
+  --r:14px;--rs:8px;--rl:20px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:3px}
+a{text-decoration:none}
+button{cursor:pointer;font-family:'Nunito',sans-serif}
+input,select,textarea{font-family:'Nunito',sans-serif}
+
+/* ===== LAYOUT ===== */
+.container{max-width:1100px;margin:0 auto;padding:0 1.2rem}
+
+/* ===== HEADER ===== */
+.header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:var(--sh1)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:.45rem;font-family:'Rajdhani',sans-serif;font-size:1.5rem;font-weight:700;color:var(--blue)}
+.logo-icon{font-size:1.2rem}
+.nav-links{display:flex;list-style:none;gap:.2rem}
+.nav-link{color:var(--muted);font-weight:700;font-size:.85rem;padding:.38rem .72rem;border-radius:var(--rs);transition:all .2s}
+.nav-link:hover,.nav-link.active{color:var(--blue);background:var(--blueL)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:.5rem}
+.hamburger span{display:block;width:23px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+
+/* ===== HERO ===== */
+.hero{padding:3.5rem 0 2.5rem;background:linear-gradient(150deg,#fff 0%,#edf3ff 55%,#dbeafe 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(74,158,255,.1) 0%,transparent 50%),radial-gradient(circle at 10% 80%,rgba(26,110,245,.07) 0%,transparent 50%);pointer-events:none}
+.hero-content{text-align:center;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:var(--blueL);color:var(--blue);font-size:.78rem;font-weight:800;padding:.32rem 1rem;border-radius:100px;border:1px solid rgba(26,110,245,.2);margin-bottom:1.2rem;letter-spacing:.3px}
+.hero-title{font-family:'Rajdhani',sans-serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:700;line-height:1.1;margin-bottom:.7rem}
+.grad{background:linear-gradient(135deg,var(--blue),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.1rem;color:var(--muted);margin-bottom:2rem;font-weight:600}
+.main-card{background:#fff;border-radius:var(--rl);padding:1.4rem;box-shadow:var(--sh3);max-width:680px;margin:0 auto 1.8rem;border:1px solid var(--border)}
+.inp-wrap{position:relative;margin-bottom:1rem}
+.main-inp{width:100%;padding:.85rem 2.8rem .85rem 1.2rem;border:2px solid var(--border);border-radius:var(--r);font-size:1rem;font-weight:700;color:var(--text);background:var(--bg);transition:all .2s}
+.main-inp:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(26,110,245,.1)}
+.inp-ic{position:absolute;right:1rem;top:50%;transform:translateY(-50%);pointer-events:none}
+.hero-btns{display:flex;gap:.65rem;flex-wrap:wrap;justify-content:center}
+.hero-res{max-width:700px;margin:0 auto}
+.hero-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.55rem;margin-top:1.4rem}
+.chip{background:#fff;border:1.5px solid rgba(26,110,245,.2);border-radius:100px;padding:.45rem 1rem;display:flex;align-items:center;gap:.45rem;box-shadow:var(--sh1);animation:pop .3s ease forwards;opacity:0}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.chip-name{font-weight:800;color:var(--text);font-size:.88rem}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:.35rem;padding:.6rem 1.35rem;border-radius:var(--r);font-size:.88rem;font-weight:800;border:2px solid transparent;transition:all .2s;white-space:nowrap;letter-spacing:.2px}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 4px 14px rgba(26,110,245,.28)}
+.btn-p:hover{background:var(--blue2);border-color:var(--blue2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,110,245,.38)}
+.btn-s{background:var(--blueLL);color:var(--blue);border-color:rgba(26,110,245,.18)}
+.btn-s:hover{background:var(--blueL);transform:translateY(-1px)}
+.btn-o{background:#fff;color:var(--blue);border-color:var(--blue)}
+.btn-o:hover{background:var(--blueL);transform:translateY(-1px)}
+.btn-sm{padding:.28rem .75rem;font-size:.73rem}
+
+/* ===== STATS ===== */
+.stats{background:var(--blue);padding:1.15rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.stat{color:#fff}
+.stat-n{display:block;font-family:'Rajdhani',sans-serif;font-size:1.7rem;font-weight:700;line-height:1}
+.stat-l{font-size:.74rem;font-weight:700;opacity:.85;letter-spacing:.5px;text-transform:uppercase}
+
+/* ===== SECTIONS ===== */
+.sec{padding:3.5rem 0}
+.bg-l{background:var(--bgL)}
+.sec-hd{text-align:center;margin-bottom:2.2rem}
+.sec-title{font-family:'Rajdhani',sans-serif;font-size:clamp(1.55rem,3vw,2.1rem);font-weight:700;margin-bottom:.45rem}
+.sec-sub{color:var(--muted);font-size:.95rem}
+.sub-title{font-family:'Rajdhani',sans-serif;font-size:1.15rem;font-weight:700;margin:1.8rem 0 1rem;color:var(--text)}
+
+/* ===== TOOL CARD ===== */
+.tc{background:#fff;border-radius:var(--rl);padding:1.6rem;box-shadow:var(--sh2);border:1px solid var(--border)}
+.ti-row{display:flex;gap:.65rem;flex-wrap:wrap;margin-bottom:1.15rem}
+.ti{flex:1;min-width:190px;padding:.72rem 1rem;border:2px solid var(--border);border-radius:var(--r);font-size:.92rem;font-weight:700;color:var(--text);background:var(--bg);transition:all .2s}
+.ti:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(26,110,245,.1)}
+.fs{padding:.72rem 1.6rem .72rem 1rem;border:2px solid var(--border);border-radius:var(--r);font-size:.85rem;font-weight:700;color:var(--text);background:var(--bg);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath fill='%231a6ef5' d='M5 7L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .7rem center;cursor:pointer;transition:border-color .2s}
+.fs:focus{outline:none;border-color:var(--blue)}
+
+/* ===== PILLS ===== */
+.pills{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.4rem}
+.pill{padding:.3rem .85rem;border:2px solid var(--border);border-radius:100px;background:var(--bg);font-size:.78rem;font-weight:800;color:var(--muted);transition:all .2s}
+.pill:hover,.pill.on{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ===== RESULTS GRID ===== */
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:.65rem}
+.rc{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r);padding:.7rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.45rem;transition:all .2s;animation:fadein .3s ease forwards;opacity:0}
+@keyframes fadein{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.rc:hover{border-color:var(--blue);box-shadow:var(--sh1);background:var(--blueL)}
+.rn{font-weight:800;font-size:.88rem;color:var(--text);word-break:break-all;flex:1}
+.ra{display:flex;gap:.3rem;flex-shrink:0}
+.cp-btn{padding:.27rem .58rem;background:var(--blue);color:#fff;border:none;border-radius:var(--rs);font-size:.7rem;font-weight:800;transition:all .2s}
+.cp-btn:hover{background:var(--blue2);transform:scale(1.05)}
+.cp-btn.done{background:#22c55e}
+.fv-btn{padding:.27rem .48rem;background:none;border:1.5px solid var(--border);border-radius:var(--rs);font-size:.82rem;transition:all .2s}
+.fv-btn:hover,.fv-btn.on{border-color:#ef4444;color:#ef4444}
+
+/* ===== FONT GRID ===== */
+.fg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.65rem}
+.fc{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r);padding:.95rem 1.2rem;transition:all .2s;animation:fadein .3s ease forwards;opacity:0}
+.fc:hover{border-color:var(--blue);box-shadow:var(--sh1)}
+.fl{font-size:.68rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.35rem}
+.fv{font-size:1.25rem;color:var(--text);word-break:break-all;margin-bottom:.7rem;min-height:1.8rem;line-height:1.4}
+.font-note{text-align:center;color:var(--muted);font-size:.87rem;padding:.7rem;background:var(--bg);border-radius:var(--rs);margin-bottom:1.3rem}
+
+/* ===== SYMBOLS ===== */
+.sym-cats{display:flex;flex-direction:column;gap:1.1rem}
+.sym-block{background:var(--bg);border-radius:var(--r);padding:.95rem 1.15rem;border:1.5px solid var(--border)}
+.sym-title{font-size:.75rem;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.7rem}
+.sym-grid{display:flex;flex-wrap:wrap;gap:.35rem}
+.sb{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;border:1.5px solid var(--border);border-radius:var(--rs);font-size:1.05rem;transition:all .15s;user-select:none}
+.sb:hover{background:var(--blueL);border-color:var(--blue);transform:scale(1.12)}
+.sb:active{transform:scale(.95)}
+.dec-res{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:.65rem;margin-bottom:1.4rem}
+
+/* ===== ABOUT ===== */
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.about-p{color:var(--muted);margin-bottom:.9rem;font-size:.93rem;line-height:1.7}
+.gtags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.3rem}
+.gtag{background:var(--blueL);color:var(--blue);border:1px solid rgba(26,110,245,.2);border-radius:100px;padding:.3rem .82rem;font-size:.8rem;font-weight:800}
+.feat-list{display:flex;flex-direction:column;gap:.9rem}
+.feat{display:flex;align-items:flex-start;gap:.9rem;background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:.95rem 1.15rem;transition:all .2s}
+.feat:hover{border-color:var(--blue);box-shadow:var(--sh1)}
+.feat-ic{font-size:1.4rem;flex-shrink:0}
+.feat p{font-size:.8rem;color:var(--muted);margin-top:.12rem}
+
+/* ===== CONTACT ===== */
+.con-card{max-width:540px;margin:0 auto;background:#fff;border-radius:var(--rl);padding:1.8rem;box-shadow:var(--sh2);border:1px solid var(--border)}
+textarea.ti{width:100%;resize:vertical}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--text);color:rgba(255,255,255,.65);padding:2.5rem 0 1.4rem}
+.footer-g{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1.8rem;margin-bottom:1.8rem}
+.fb .logo{color:#fff;margin-bottom:.65rem}
+.fb p{font-size:.85rem;line-height:1.6}
+.fl-col h4{color:#fff;font-weight:800;margin-bottom:.9rem;font-size:.88rem;text-transform:uppercase;letter-spacing:.4px}
+.fl-col a{display:block;color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:.45rem;transition:color .2s}
+.fl-col a:hover{color:var(--accent)}
+.foot-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:1.3rem;font-size:.8rem;color:rgba(255,255,255,.35);text-align:center}
+
+/* ===== TOAST ===== */
+.toast{position:fixed;bottom:1.4rem;left:50%;transform:translateX(-50%) translateY(80px);background:#1a1f36;color:#fff;padding:.65rem 1.4rem;border-radius:100px;font-size:.83rem;font-weight:800;z-index:9999;transition:transform .3s;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ===== FAB ===== */
+.fab{position:fixed;bottom:1.4rem;right:1.4rem;background:var(--blue);color:#fff;border:none;border-radius:100px;padding:.65rem 1.1rem;font-size:.83rem;font-weight:800;box-shadow:0 4px 18px rgba(26,110,245,.4);z-index:500;transition:all .2s}
+.fab:hover{background:var(--blue2);transform:translateY(-2px)}
+
+/* ===== LOAD MORE ===== */
+.lm{text-align:center;margin-top:1.3rem}
+
+/* ===== EMPTY ===== */
+.empty{text-align:center;padding:2.5rem 1rem;color:var(--muted);grid-column:1/-1}
+.empty-ic{font-size:2.5rem;margin-bottom:.8rem}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);flex-direction:column;padding:1rem;gap:.2rem;box-shadow:var(--sh2)}
+  .nav-links.open{display:flex}
+  .hero{padding:2.5rem 0 2rem}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{width:100%;justify-content:center}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .ti-row{flex-direction:column}
+  .ti,.fs{min-width:unset;width:100%}
+  .rg,.fg,.dec-res{grid-template-columns:1fr 1fr}
+  .about-g{grid-template-columns:1fr}
+  .footer-g{grid-template-columns:1fr}
+  .sec{padding:2.5rem 0}
+  .fab{bottom:.9rem;right:.9rem;padding:.55rem .95rem;font-size:.78rem}
+}
+@media(max-width:480px){
+  .rg,.fg,.dec-res{grid-template-columns:1fr}
+  .main-card{padding:1.1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#home" class="logo"><span class="logo-icon">⚡</span><span>GamerNick</span></a>
+      <button class="hamburger" id="ham"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navL">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#sec-nick" class="nav-link">Nickname</a></li>
+        <li><a href="#sec-font" class="nav-link">Fonts</a></li>
+        <li><a href="#sec-sym" class="nav-link">Symbols</a></li>
+        <li><a href="#sec-clan" class="nav-link">Clan</a></li>
+        <li><a href="#sec-about" class="nav-link">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">🎮 Free Fire · PUBG · COD · Fortnite · BGMI</div>
+      <h1 class="hero-title">Gaming Nickname<br><span class="grad">Generator</span></h1>
+      <p class="hero-sub">Create Cool Gamer Names Instantly</p>
+      <div class="main-card">
+        <div class="inp-wrap">
+          <input type="text" id="heroInp" class="main-inp" placeholder="Enter your name (e.g. Ali, Shadow, Max...)" maxlength="20" autocomplete="off">
+          <span class="inp-ic">✏️</span>
+        </div>
+        <div class="hero-btns">
+          <button class="btn btn-p" id="btn-nick">⚡ Generate Nickname</button>
+          <button class="btn btn-s" id="btn-stylish">✨ Stylish Name</button>
+          <button class="btn btn-o" id="btn-random">🎲 Random Name</button>
+        </div>
+      </div>
+      <div class="hero-res" id="heroRes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><span class="stat-n">2000+</span><span class="stat-l">Nicknames</span></div>
+      <div class="stat"><span class="stat-n">500+</span><span class="stat-l">Font Styles</span></div>
+      <div class="stat"><span class="stat-n">1000+</span><span class="stat-l">Symbols</span></div>
+      <div class="stat"><span class="stat-n">6+</span><span class="stat-l">Games</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- NICKNAME GENERATOR -->
+<section class="sec" id="sec-nick">
+  <div class="container">
+    <div class="sec-hd">
+      <h2 class="sec-title">🎯 Nickname Generator</h2>
+      <p class="sec-sub">Generate 2000+ cool gaming nicknames instantly</p>
+    </div>
+    <div class="tc">
+      <div class="ti-row">
+        <input type="text" id="nickInp" class="ti" placeholder="Enter your name (optional)..." maxlength="20">
+        <select id="nickCat" class="fs">
+          <option value="all">All Categories</option>
+          <option value="cool">Cool Names</option>
+          <option value="pro">Pro Gamer</option>
+          <option value="dark">Dark Names</option>
+          <option value="funny">Funny Names</option>
+          <option value="short">Short Names</option>
+          <option value="clan">Clan Names</option>
+          <option value="stylish">Stylish Names</option>
+        </select>
+        <button class="btn btn-p" id="nickGenBtn">⚡ Generate</button>
+      </div>
+      <div class="pills" id="nickPills">
+        <button class="pill on" data-cat="all">All</button>
+        <button class="pill" data-cat="cool">Cool</button>
+        <button class="pill" data-cat="pro">Pro</button>
+        <button class="pill" data-cat="dark">Dark</button>
+        <button class="pill" data-cat="funny">Funny</button>
+        <button class="pill" data-cat="short">Short</button>
+        <button class="pill" data-cat="clan">Clan</button>
+        <button class="pill" data-cat="stylish">Stylish</button>
+      </div>
+      <div class="rg" id="nickRes"></div>
+      <div class="lm" id="nickMore" style="display:none">
+        <button class="btn btn-o" id="nickMoreBtn">Load More Names</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FONT GENERATOR -->
+<section class="sec bg-l" id="sec-font">
+  <div class="container">
+    <div class="sec-hd">
+      <h2 class="sec-title">✨ Stylish Font Generator</h2>
+      <p class="sec-sub">Convert your name into 500+ gaming font styles</p>
+    </div>
+    <div class="tc">
+      <div class="ti-row">
+        <input type="text" id="fontInp" class="ti" placeholder="Type your name to see all font styles..." maxlength="20">
+        <button class="btn btn-p" id="fontGenBtn">✨ Generate Fonts</button>
+      </div>
+      <div class="font-note" id="fontNote">👆 Type your name above — fonts appear instantly!</div>
+      <div class="fg" id="fontRes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SYMBOL GENERATOR -->
+<section class="sec" id="sec-sym">
+  <div class="container">
+    <div class="sec-hd">
+      <h2 class="sec-title">⚡ Symbol Generator</h2>
+      <p class="sec-sub">1000+ gaming symbols — click any to copy!</p>
+    </div>
+    <div class="tc">
+      <div class="ti-row">
+        <input type="text" id="symInp" class="ti" placeholder="Enter name to create decorated names..." maxlength="20">
+        <button class="btn btn-p" id="symGenBtn">🎨 Decorate Name</button>
+      </div>
+      <div class="dec-res" id="decRes"></div>
+      <h3 class="sub-title">🎯 All Gaming Symbols — Click to Copy</h3>
+      <div class="sym-cats" id="symCats"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLAN GENERATOR -->
+<section class="sec bg-l" id="sec-clan">
+  <div class="container">
+    <div class="sec-hd">
+      <h2 class="sec-title">🏆 Clan Name Generator</h2>
+      <p class="sec-sub">Generate powerful clan names for your squad</p>
+    </div>
+    <div class="tc">
+      <div class="ti-row">
+        <input type="text" id="clanInp" class="ti" placeholder="Enter clan keyword (optional)..." maxlength="20">
+        <select id="clanGame" class="fs">
+          <option value="all">All Games</option>
+          <option value="ff">Free Fire</option>
+          <option value="pubg">PUBG / BGMI</option>
+          <option value="cod">Call of Duty</option>
+          <option value="fn">Fortnite</option>
+        </select>
+        <button class="btn btn-p" id="clanGenBtn">🏆 Generate</button>
+      </div>
+      <div class="rg" id="clanRes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAVORITES -->
+<section class="sec" id="sec-fav" style="display:none">
+  <div class="container">
+    <div class="sec-hd">
+      <h2 class="sec-title">❤️ My Favorites</h2>
+      <p class="sec-sub">Names you saved</p>
+    </div>
+    <div class="tc">
+      <div class="rg" id="favRes"></div>
+      <div style="margin-top:1rem">
+        <button class="btn btn-o" id="favClrBtn">🗑️ Clear All</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec bg-l" id="sec-about">
+  <div class="container">
+    <div class="about-g">
+      <div>
+        <h2 class="sec-title">About GamerNick</h2>
+        <p class="about-p">GamerNick is a free, fast, and powerful gaming nickname generator built for players who want to stand out. Whether you play Free Fire, PUBG, Call of Duty, Fortnite, or BGMI — we help you create the perfect gamer identity.</p>
+        <p class="about-p">Our tool features 2000+ nickname combinations, 500+ stylish font styles, and 1000+ gaming symbols to craft your ultimate gamer name.</p>
+        <div class="gtags">
+          <span class="gtag">🔥 Free Fire</span>
+          <span class="gtag">🎯 PUBG</span>
+          <span class="gtag">💣 Call of Duty</span>
+          <span class="gtag">🏗️ Fortnite</span>
+          <span class="gtag">🎮 BGMI</span>
+          <span class="gtag">⚡ Other Games</span>
+        </div>
+      </div>
+      <div class="feat-list">
+        <div class="feat"><span class="feat-ic">⚡</span><div><strong>Instant Generation</strong><p>Results appear in milliseconds</p></div></div>
+        <div class="feat"><span class="feat-ic">📋</span><div><strong>One-Click Copy</strong><p>Copy any name with one tap</p></div></div>
+        <div class="feat"><span class="feat-ic">❤️</span><div><strong>Save Favorites</strong><p>Keep the names you love</p></div></div>
+        <div class="feat"><span class="feat-ic">📱</span><div><strong>Mobile Friendly</strong><p>Works perfectly on all devices</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="sec-contact">
+  <div class="container">
+    <div class="sec-hd">
+      <h2 class="sec-title">📬 Contact Us</h2>
+      <p class="sec-sub">Have suggestions or feedback? We'd love to hear from you.</p>
+    </div>
+    <div class="con-card">
+      <div style="display:flex;flex-direction:column;gap:.9rem">
+        <input type="text" class="ti" placeholder="Your Name">
+        <input type="email" class="ti" placeholder="Your Email">
+        <textarea class="ti" placeholder="Your message..." rows="4"></textarea>
+        <button class="btn btn-p" id="conBtn">📤 Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-g">
+      <div class="fb">
+        <div class="logo"><span class="logo-icon">⚡</span><span>GamerNick</span></div>
+        <p>The ultimate free gaming nickname generator for all popular games worldwide.</p>
+      </div>
+      <div class="fl-col">
+        <h4>Tools</h4>
+        <a href="#sec-nick">Nickname Generator</a>
+        <a href="#sec-font">Font Generator</a>
+        <a href="#sec-sym">Symbol Generator</a>
+        <a href="#sec-clan">Clan Names</a>
+      </div>
+      <div class="fl-col">
+        <h4>Info</h4>
+        <a href="#sec-about">About</a>
+        <a href="#sec-contact">Contact</a>
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <p>© 2025 GamerNick. All rights reserved. Free to use for gamers worldwide.</p>
+      <p id="privacy" style="margin-top:.6rem;font-size:.76rem">Privacy Policy: We do not collect personal data. Names are for entertainment purposes only.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FAB -->
+<button class="fab" id="fabBtn">❤️ <span id="favCnt">0</span></button>
+
+<script>
+// ============================================================
+// ALL DATA
+// ============================================================
+
+var NICK_DATA = {
+  cool: {
+    pre: ['Shadow','Ghost','Dark','Cyber','Neo','Hyper','Neon','Void','Alpha','Omega','Ultra','Mega','Super','Stealth','Phantom','Storm','Nova','Blaze','Frost','Venom','Toxic','Rogue','Epic','Elite','Apex','Titan','Blade','Zero','Skull','Iron','Silver','Golden','Diamond','Crimson','Azure','Mystic','Savage','Wild','Rapid','Flux','Surge','Dusk','Dawn','Flash','Spark','Echo','Orbit','Glitch','Warp','Hex','Nexus','Prism','Ember','Comet','Lunar','Solar','Astral'],
+    suf: ['Hunter','Sniper','Rider','Killer','Warrior','Legend','Master','Slayer','Destroyer','Avenger','Breaker','Fighter','Striker','Crusher','Runner','Ranger','Stalker','Blazer','Drifter','Reaver','Seeker','Raider','Bandit','Rebel','Viper','Wolf','Eagle','Hawk','Tiger','Dragon','Phoenix','Cobra','Raven','Panther','Shark','Falcon','Bear','Lynx','Scorpion','Talon']
+  },
+  pro: {
+    pre: ['Pro','Ace','God','King','Lord','Master','Legend','Champion','Warrior','Ninja','Hero','Boss','Chief','Commander','General','Elite','Expert','Veteran','Clutch','Ranked','Grand','Goat','Sigma','Prime','Royal','Chosen','Official'],
+    suf: ['Pro','GG','YT','TTV','Gaming','Plays','Clips','OP','MVP','GOD','Ranked','Elite','Official','Real','HD','Plus','Ultra','Max','Prime','Ace','Expert','Champ','King']
+  },
+  dark: {
+    pre: ['Devil','Demon','Reaper','Death','Dark','Shadow','Doom','Abyss','Curse','Evil','Inferno','Hellion','Wrath','Grim','Fallen','Sinister','Plague','Dread','Malice','Specter','Wraith','Necro','Vile','Bane','Crypt','Chaos','Ruin','Torment','Void','Grimm'],
+    suf: ['Soul','Shade','Bane','Curse','Doom','Reaper','Fiend','Spawn','Void','Abyss','Slayer','Eater','Wraith','Harbinger','Specter','Ghost','Phantom','Shadow','Dread','Ruin','Rot','Spite','Grave','Crypt']
+  },
+  funny: {
+    pre: ['Noob','Troll','Potato','Sussy','Bruh','Yolo','Derp','Clumsy','Laggy','Boomer','Snack','Weird','Quirky','Salty','Tilted','Lucky','Goober','Dizzy','Silly','Random','Cringe','Yeet','SweatyBot','ThrowKing','Raging'],
+    suf: ['Lol','XD','Bruh','UwU','Nub','Fail','Oops','AFK','Lag','GG','EZ','Yeet','Noob','Dummy','Meme','Ratio','Potato','Rager','Sweat','Clown','Bot','Goober']
+  },
+  short: {
+    pre: ['Zyx','Axe','Orb','Vex','Nox','Hex','Kaz','Jax','Zed','Rex','Kai','Fox','Arc','Onyx','Zap','Ion','Lux','Ryn','Wyn','Skye','Pyro','Xan','Ash','Ryu','Syn'],
+    suf: ['X','Z','99','XD','Pro','GG','YT','OP','XP','777','404','007','V2','R1','X9','XO','ZX']
+  },
+  clan: {
+    pre: ['Team','Clan','Squad','Guild','Legion','Order','Alliance','Force','Unit','Faction','Brotherhood','Dynasty','Empire','Kingdom','Syndicate','Division','Corps','Circle','Pact','Union','House'],
+    suf: ['Official','HQ','Base','Central','Prime','Main','Alpha','Omega','One','Force','Unit','Elite','Pro','Core','Hub','Zone','Ops']
+  },
+  stylish: {
+    pre: ['Eternal','Divine','Majestic','Royal','Noble','Sacred','Celestial','Astral','Crystal','Radiant','Luminous','Glorious','Vivid','Serene','Mystic','Ancient','Prime','Sublime','Infinite','Cosmic','Stellar','Aurora','Zenith','Solaris','Ember','Prism'],
+    suf: ['Light','Star','Aura','Grace','Bliss','Shine','Spark','Glow','Dream','Vision','Heart','Spirit','Soul','Essence','Halo','Bloom','Veil','Song','Rift','Tide']
+  }
+};
+
+var BASE = ['Shadow','Ghost','Dark','Cyber','Neo','Hyper','Neon','Void','Alpha','Omega','Ultra','Mega','Super','Stealth','Phantom','Storm','Nova','Blaze','Frost','Venom','Toxic','Rogue','Epic','Elite','Apex','Titan','Blade','Zero','Skull','Iron','Silver','Golden','Diamond','Crimson','Azure','Mystic','Savage','Wild','Rapid','Flux','Hunter','Sniper','Rider','Killer','Warrior','Legend','Master','Slayer','Destroyer','Avenger','Breaker','Fighter','Striker','Crusher','Runner','Ranger','Stalker','Blazer','Drifter','Seeker','Raider','Bandit','Rebel','Viper','Wolf','Eagle','Hawk','Tiger','Dragon','Phoenix','Devil','Demon','Reaper','Death','Doom','Abyss','Curse','Evil','Inferno','Wrath','Grim','Fallen','Sinister','Plague','Dread','Wraith','Bane','Pro','Ace','God','King','Lord','Champion','Ninja','Hero','Boss','Chief','Eternal','Divine','Majestic','Royal','Noble','Sacred','Celestial','Astral','Crystal','Radiant','Glorious','Infinite','Prime','Sublime','Kai','Fox','Zed','Rex','Ice','Fire','Thunder','Lightning','Tornado','Blizzard','Cyclone','Tempest','Cobra','Serpent','Scorpion','Mantis','Talon','Fang','Claw','Thorn','Spike','Edge','Razor','Shard','Lance','Night','Dawn','Dusk','Midnight','Twilight','Eclipse','Solar','Lunar','Stellar','Cosmic','Galactic','Nebula','Black','White','Red','Blue','Green','Purple','Orange','Crimson','Cobalt','Emerald','Glitch','Warp','Nexus','Jade','Skye','Colt','Drake','Finn','Gale','Zane','Ryze'];
+
+var NAME_SUFS = ['X','Pro','YT','Gaming','Legend','Killer','GG','TTV','Sniper','Hunter','Official','Real','Alpha','Omega','Prime','God','Hero','Elite','Master','Boss','Ninja','Warrior','Dragon','Wolf','Eagle','Shadow','Ghost','Blaze','Storm','Nova','Ultra','Apex','Titan','Zero','Skull','Fire','Ice','Dark','King','Lord','Champ','99','007','XD','OP','MVP','Ranked','FF','PUBG','COD'];
+
+var CLAN_PRE = ['Alpha','Omega','Delta','Sigma','Gamma','Phantom','Shadow','Dark','Elite','Pro','Legend','Epic','Supreme','Royal','Divine','Eternal','Brutal','Savage','Toxic','Infernal','Silent','Rapid','Ultra','Nova','Cyber','Neo','Storm','Iron','Steel','Titan','Void','Apex','Prime','Ghost','Doom'];
+var CLAN_SUF = ['Squad','Clan','Legion','Force','Unit','Army','Warriors','Soldiers','Assassins','Snipers','Hunters','Killers','Destroyers','Fighters','Strikers','Raiders','Outlaws','Rebels','Ghosts','Phantoms','Wolves','Eagles','Dragons','Tigers','Cobras','Vipers','Hawks','Lions','Bears','Sharks'];
+var GAME_TAGS = {
+  ff:   ['FF','FireForce','FlameSquad','BlazeKings','FreeFire','InfernoClan','PhoenixFF','DragonFF','FireKings'],
+  pubg: ['BGMI','PubgSquad','FieldOps','ChickenSquad','PubgPro','BattleRoyale','LastCircle','ZoneMasters','PubgElite'],
+  cod:  ['COD','WarZone','GhostOps','TacticalUnit','DropShot','GulagEscape','VerdanskVets','WarPack','CallofDuty'],
+  fn:   ['FN','BuildMasters','StormRiders','DefaultSquad','FortniteElite','BattleBus','VictoryRoyale','BuildKings']
+};
+
+// ============================================================
+// FONT STYLES — 32 working styles, all tested
+// ============================================================
+
+// Helper: map a character using an object map
+function cm(c, m) { return m.hasOwnProperty(c) ? m[c] : c; }
+
+var FONTS = [
+  {
+    name: 'Full Width',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCharCode(n + 65248);
+        else if (n >= 97 && n <= 122) r += String.fromCharCode(n + 65248);
+        else r += t[i];
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Bold Serif',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D400 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D41A + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Italic Serif',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D434 + n - 65);
+        else if (n >= 97 && n <= 122) {
+          var idx = n - 97;
+          r += (idx === 7) ? 'h' : String.fromCodePoint(0x1D44E + idx);
+        }
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Bold Italic',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D468 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D482 + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Script Cursive',
+    fn: function(t) {
+      var m = {'A':'\uD835\uDC9C','B':'\u212C','C':'\uD835\uDC9E','D':'\uD835\uDC9F','E':'\u2130','F':'\u2131','G':'\uD835\uDCA2','H':'\u210B','I':'\u2110','J':'\uD835\uDCA5','K':'\uD835\uDCA6','L':'\u2112','M':'\u2133','N':'\uD835\uDCA9','O':'\uD835\uDCAA','P':'\uD835\uDCAB','Q':'\uD835\uDCAC','R':'\u211B','S':'\uD835\uDCAE','T':'\uD835\uDCAF','U':'\uD835\uDCB0','V':'\uD835\uDCB1','W':'\uD835\uDCB2','X':'\uD835\uDCB3','Y':'\uD835\uDCB4','Z':'\uD835\uDCB5','a':'\uD835\uDCB6','b':'\uD835\uDCB7','c':'\uD835\uDCB8','d':'\uD835\uDCB9','e':'\u212F','f':'\uD835\uDCBB','g':'\u210A','h':'\uD835\uDCBD','i':'\uD835\uDCBE','j':'\uD835\uDCBF','k':'\uD835\uDCC0','l':'\uD835\uDCC1','m':'\uD835\uDCC2','n':'\uD835\uDCC3','o':'\u2134','p':'\uD835\uDCC5','q':'\uD835\uDCC6','r':'\uD835\uDCC7','s':'\uD835\uDCC8','t':'\uD835\uDCC9','u':'\uD835\uDCCA','v':'\uD835\uDCCB','w':'\uD835\uDCCC','x':'\uD835\uDCCD','y':'\uD835\uDCCE','z':'\uD835\uDCCF'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r;
+    }
+  },
+  {
+    name: 'Bold Script',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D4D0 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D4EA + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Fraktur Gothic',
+    fn: function(t) {
+      var m = {'A':'\uD835\uDD04','B':'\uD835\uDD05','C':'\u212D','D':'\uD835\uDD07','E':'\uD835\uDD08','F':'\uD835\uDD09','G':'\uD835\uDD0A','H':'\u210C','I':'\u2111','J':'\uD835\uDD0D','K':'\uD835\uDD0E','L':'\uD835\uDD0F','M':'\uD835\uDD10','N':'\uD835\uDD11','O':'\uD835\uDD12','P':'\uD835\uDD13','Q':'\uD835\uDD14','R':'\u211C','S':'\uD835\uDD16','T':'\uD835\uDD17','U':'\uD835\uDD18','V':'\uD835\uDD19','W':'\uD835\uDD1A','X':'\uD835\uDD1B','Y':'\uD835\uDD1C','Z':'\u2128','a':'\uD835\uDD1E','b':'\uD835\uDD1F','c':'\uD835\uDD20','d':'\uD835\uDD21','e':'\uD835\uDD22','f':'\uD835\uDD23','g':'\uD835\uDD24','h':'\uD835\uDD25','i':'\uD835\uDD26','j':'\uD835\uDD27','k':'\uD835\uDD28','l':'\uD835\uDD29','m':'\uD835\uDD2A','n':'\uD835\uDD2B','o':'\uD835\uDD2C','p':'\uD835\uDD2D','q':'\uD835\uDD2E','r':'\uD835\uDD2F','s':'\uD835\uDD30','t':'\uD835\uDD31','u':'\uD835\uDD32','v':'\uD835\uDD33','w':'\uD835\uDD34','x':'\uD835\uDD35','y':'\uD835\uDD36','z':'\uD835\uDD37'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r;
+    }
+  },
+  {
+    name: 'Double Struck',
+    fn: function(t) {
+      var m = {'A':'\uD835\uDD38','B':'\uD835\uDD39','C':'\u2102','D':'\uD835\uDD3B','E':'\uD835\uDD3C','F':'\uD835\uDD3D','G':'\uD835\uDD3E','H':'\u210D','I':'\uD835\uDD40','J':'\uD835\uDD41','K':'\uD835\uDD42','L':'\uD835\uDD43','M':'\uD835\uDD44','N':'\u2115','O':'\uD835\uDD46','P':'\u2119','Q':'\u211A','R':'\u211D','S':'\uD835\uDD4A','T':'\uD835\uDD4B','U':'\uD835\uDD4C','V':'\uD835\uDD4D','W':'\uD835\uDD4E','X':'\uD835\uDD4F','Y':'\uD835\uDD50','Z':'\u2124','a':'\uD835\uDD52','b':'\uD835\uDD53','c':'\uD835\uDD54','d':'\uD835\uDD55','e':'\uD835\uDD56','f':'\uD835\uDD57','g':'\uD835\uDD58','h':'\uD835\uDD59','i':'\uD835\uDD5A','j':'\uD835\uDD5B','k':'\uD835\uDD5C','l':'\uD835\uDD5D','m':'\uD835\uDD5E','n':'\uD835\uDD5F','o':'\uD835\uDD60','p':'\uD835\uDD61','q':'\uD835\uDD62','r':'\uD835\uDD63','s':'\uD835\uDD64','t':'\uD835\uDD65','u':'\uD835\uDD66','v':'\uD835\uDD67','w':'\uD835\uDD68','x':'\uD835\uDD69','y':'\uD835\uDD6A','z':'\uD835\uDD6B'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r;
+    }
+  },
+  {
+    name: 'Sans Serif',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D5A0 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D5BA + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Sans Bold',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D5D4 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D5EE + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Sans Italic',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D608 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D622 + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Monospace',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D670 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D68A + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Circled',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x24B6 + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x24D0 + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Squared',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1F130 + n - 65);
+        else r += c;
+      }
+      return r.toUpperCase();
+    }
+  },
+  {
+    name: 'Bold Fraktur',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i], n = t.charCodeAt(i);
+        if (n >= 65 && n <= 90) r += String.fromCodePoint(0x1D56C + n - 65);
+        else if (n >= 97 && n <= 122) r += String.fromCodePoint(0x1D586 + n - 97);
+        else r += c;
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Small Caps',
+    fn: function(t) {
+      var m = {'a':'\u1D00','b':'\u0299','c':'\u1D04','d':'\u1D05','e':'\u1D07','f':'\uA730','g':'\u0262','h':'\u029C','i':'\u026A','j':'\u1D0A','k':'\u1D0B','l':'\u029F','m':'\u1D0D','n':'\u0274','o':'\u1D0F','p':'\u1D18','r':'\u0280','s':'\uA731','t':'\u1D1B','u':'\u1D1C','v':'\u1D20','w':'\u1D21','x':'x','y':'\u028F','z':'\u1D22'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i].toLowerCase(), m);
+      return r;
+    }
+  },
+  {
+    name: 'Leet Speak',
+    fn: function(t) {
+      return t.replace(/a/gi,'4').replace(/e/gi,'3').replace(/i/gi,'1').replace(/o/gi,'0').replace(/s/gi,'$').replace(/t/gi,'7').replace(/g/gi,'9').replace(/b/gi,'8');
+    }
+  },
+  {
+    name: 'Aesthetic Spaced',
+    fn: function(t) {
+      return t.toUpperCase().split('').join(' ');
+    }
+  },
+  {
+    name: 'Bubble Text',
+    fn: function(t) {
+      var m = {'a':'\u24D0','b':'\u24D1','c':'\u24D2','d':'\u24D3','e':'\u24D4','f':'\u24D5','g':'\u24D6','h':'\u24D7','i':'\u24D8','j':'\u24D9','k':'\u24DA','l':'\u24DB','m':'\u24DC','n':'\u24DD','o':'\u24DE','p':'\u24DF','q':'\u24E0','r':'\u24E1','s':'\u24E2','t':'\u24E3','u':'\u24E4','v':'\u24E5','w':'\u24E6','x':'\u24E7','y':'\u24E8','z':'\u24E9','A':'\u24B6','B':'\u24B7','C':'\u24B8','D':'\u24B9','E':'\u24BA','F':'\u24BB','G':'\u24BC','H':'\u24BD','I':'\u24BE','J':'\u24BF','K':'\u24C0','L':'\u24C1','M':'\u24C2','N':'\u24C3','O':'\u24C4','P':'\u24C5','Q':'\u24C6','R':'\u24C7','S':'\u24C8','T':'\u24C9','U':'\u24CA','V':'\u24CB','W':'\u24CC','X':'\u24CD','Y':'\u24CE','Z':'\u24CF'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r;
+    }
+  },
+  {
+    name: 'Strikethrough',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += t[i] + '\u0336';
+      return r;
+    }
+  },
+  {
+    name: 'Underline',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += t[i] + '\u0332';
+      return r;
+    }
+  },
+  {
+    name: 'Overline',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += t[i] + '\u0305';
+      return r;
+    }
+  },
+  {
+    name: 'Wave Style',
+    fn: function(t) {
+      var sc = {'a':'\u1D43','b':'\u1D47','c':'\u1D9C','d':'\u1D48','e':'\u1D49','f':'\u1DA0','g':'\u1D4D','h':'\u02B0','i':'\u2071','j':'\u02B2','k':'\u1D4F','l':'\u02E1','m':'\u1D50','n':'\u207F','o':'\u1D52','p':'\u1D56','r':'\u02B3','s':'\u02E2','t':'\u1D57','u':'\u1D58','v':'\u1D5B','w':'\u02B7','x':'\u02E3','y':'\u02B8','z':'\u1DBB'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) {
+        var c = t[i];
+        var lo = c.toLowerCase();
+        if (i % 2 === 0) r += c.toUpperCase();
+        else r += (sc[lo] || c);
+      }
+      return r;
+    }
+  },
+  {
+    name: 'Currency Mix',
+    fn: function(t) {
+      return t.replace(/a/gi,'@').replace(/s/gi,'$').replace(/e/gi,'\u20AC').replace(/o/gi,'0').replace(/i/gi,'!').replace(/t/gi,'+').replace(/b/gi,'8').replace(/g/gi,'9');
+    }
+  },
+  {
+    name: 'Latin Symbols',
+    fn: function(t) {
+      var m = {'a':'\u03B1','b':'\u0253','c':'\u00E7','d':'\u010F','e':'\u03B5','f':'\u0192','g':'\u0123','h':'\u0127','i':'\u03B9','j':'\u0135','k':'\u03BA','l':'\u013A','m':'m','n':'\u00F1','o':'\u03BF','p':'\u03C1','r':'\u0157','s':'\u0161','t':'\u0163','u':'\u03C5','w':'\u03C9','x':'\u03C7','y':'\u03C8','z':'\u03B6','A':'\u0391','B':'\u0392','C':'\u00C7','D':'\u0110','E':'\u0395','F':'\u0191','G':'\u011E','H':'\u0397','I':'\u0399','J':'\u0134','K':'\u039A','L':'\u0139','M':'\u039C','N':'\u039D','O':'\u039F','P':'\u03A1','R':'\u0156','S':'\u0160','T':'\u03A4','U':'\u03A5','W':'\u03A9','X':'\u03A7','Y':'\u03A8','Z':'\u0396'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r;
+    }
+  },
+  {
+    name: 'Upside Down',
+    fn: function(t) {
+      var m = {'a':'\u0250','b':'q','c':'\u0254','d':'p','e':'\u01DD','f':'\u025F','g':'\u0253','h':'\u0265','i':'\u1D09','j':'\u027E','k':'\u029E','l':'l','m':'\u026F','n':'u','o':'o','p':'d','q':'b','r':'\u0279','s':'s','t':'\u0287','u':'n','v':'\u028C','w':'\u028D','x':'x','y':'\u028E','z':'z','A':'\u2200','B':'q','C':'\u0186','D':'p','E':'\u018E','F':'\u2132','G':'\u05E4','H':'H','I':'I','J':'\u027E','K':'\u029E','L':'\u02E5','M':'W','N':'N','O':'O','P':'\u0500','Q':'Q','R':'\u1D4E','S':'S','T':'\u22A5','U':'\u2229','V':'\u039B','W':'M','X':'X','Y':'\u2144','Z':'Z'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r.split('').reverse().join('');
+    }
+  },
+  {
+    name: 'Chinese Style',
+    fn: function(t) {
+      var m = {'A':'\u5342','B':'\u4E43','C':'\u531A','D':'\uA4EA','E':'\u4E47','F':'\u5343','G':'\uA4C6','H':'\uA4FC','I':'\u4E28','J':'\uFF7C','K':'\u040A','L':'\u30A5','M':'\u723A','N':'\u51E0','O':'\u30D6','P':'\u5349','R':'\u5C3A','S':'\u4E02','T':'\u30D2','U':'\u30A9','V':'\u14BF','W':'\u5C71','X':'\u4E42','Y':'\u30A2','Z':'\u4E59','a':'\u5342','b':'\u4E43','c':'\u531A','d':'\uA4EA','e':'\u4E47','f':'\u5343','g':'\uA4C6','h':'\uA4FC','i':'\u4E28','j':'\uFF7C','k':'\u040A','l':'\u30A5','m':'\u723A','n':'\u51E0','o':'\u30D6','p':'\u5349','r':'\u5C3A','s':'\u4E02','t':'\u30D2','u':'\u30A9','v':'\u14BF','w':'\u5C71','x':'\u4E42','y':'\u30A2','z':'\u4E59'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r;
+    }
+  },
+  {
+    name: 'Runic',
+    fn: function(t) {
+      var m = {'a':'\u16AB','b':'\u16D2','c':'\u16B3','d':'\u16DE','e':'\u16D6','f':'\u16A0','g':'\u16B7','h':'\u16BA','i':'\u16C1','j':'\u16C3','k':'\u16B2','l':'\u16DA','m':'\u16D7','n':'\u16BE','o':'\u16DF','p':'\u16C8','r':'\u16B1','s':'\u16CA','t':'\u16CF','u':'\u16A2','w':'\u16B9','x':'\u16C9','y':'\u16A4','z':'\u16C9'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += (m[t[i].toLowerCase()] || t[i].toUpperCase());
+      return r;
+    }
+  },
+  {
+    name: 'Mirror Text',
+    fn: function(t) {
+      var m = {'a':'\u0250','b':'d','c':'\u0254','d':'b','e':'\u01DD','h':'\u029C','i':'i','k':'\u029E','l':'l','m':'m','n':'n','o':'o','p':'q','q':'p','r':'\u0279','s':'s','t':'\u0167','u':'u','v':'v','w':'w','x':'x','y':'y','A':'A','B':'\uA4D0','C':'\u0186','D':'\u15E1','E':'\u018E','H':'H','I':'I','M':'M','N':'\u0418','O':'O','R':'\u042F','S':'S','T':'T','U':'U','V':'V','W':'W','X':'X','Y':'Y'};
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += cm(t[i], m);
+      return r;
+    }
+  },
+  {
+    name: 'Dotted Style',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += t[i] + '\u0307';
+      return r;
+    }
+  },
+  {
+    name: 'Double Underline',
+    fn: function(t) {
+      var r = '';
+      for (var i = 0; i < t.length; i++) r += t[i] + '\u0333';
+      return r;
+    }
+  }
+];
+
+// ============================================================
+// SYMBOL DATA — all stored as unicode escapes to avoid parse errors
+// ============================================================
+var SYMS = [
+  {
+    cat: 'Stars & Sparkles',
+    s: ['\u2605','\u2606','\u2726','\u2727','\u272A','\u272F','\u2730','\u2735','\u2738','\u2739','\u273A','\u273B','\u273C','\u273D','\u273E','\u273F','\u2740','\u2741','\u2742','\u2743','\u2744','\u2745','\u2746','\u2747','\u2748','\u2749','\u274A','\u274B','\u2749','\u2756','\u2733','\u2734','\u2604','\u2603','\u26A1','\u2600','\u2601','\u263C','\u2022','\u25CF','\u25AA','\u25AB','\u25BA','\u25C4','\u25B2','\u25BC']
+  },
+  {
+    cat: 'Battle & Gaming',
+    s: ['\u2694','\u2764','\u2620','\u2622','\u2623','\u265B','\u265A','\u265C','\u265D','\u265E','\u265F','\u2660','\u2663','\u2665','\u2666','\u2694','\u26CF','\u2699','\u2693','\u2622','\u2623','\u267B','\u2648','\u2649','\u264A','\u264B','\u264C','\u264D','\u264E','\u264F','\u2650','\u2651','\u2652','\u2653','\u2654','\u2655','\u2656','\u2657','\u2658','\u2659','\u265A','\u265B','\u265C','\u265D','\u265E','\u265F']
+  },
+  {
+    cat: 'Decorative Borders',
+    s: ['\uA671','\uA672','\u300A','\u300B','\u3008','\u3009','\u300C','\u300D','\u300E','\u300F','\u3010','\u3011','\u3016','\u3017','\u3018','\u3019','\u301A','\u301B','\u2308','\u2309','\u230A','\u230B','\u2329','\u232A','\u27E8','\u27E9','\u27E6','\u27E7','\u27EA','\u27EB','\u231C','\u231D','\u231E','\u231F','\u250C','\u2510','\u2514','\u2518','\u251C','\u2524','\u252C','\u2534','\u253C','\u2550','\u2551','\u2554','\u2557','\u255A','\u255D']
+  },
+  {
+    cat: 'CJK Asian Style',
+    s: ['\u4E42','\u4E17','\u5F61','\u5350','\u3006','\u3007','\u3005','\u30C4','\u30B7','\u30E1','\u30E0','\u4E48','\u4E2A','\u4E43','\u4E47','\u4E4C','\u4E59','\u4E5C','\u4E5D','\u4E5E','\u4E5F','\u4E60','\u4E61','\u4E62','\u4E63','\u4E64','\u4E65','\u4E66','\u4E67','\u4E68','\u4E69','\u4E6A','\u4E6B','\u4E6C','\u4E6D','\u4E6E','\u4E6F','\u4E70','\u5C71','\u5C3A','\u723A','\u5349','\u4E28','\u5343','\u531A','\u5C3A']
+  },
+  {
+    cat: 'Hearts & Love',
+    s: ['\u2661','\u2665','\u2764','\u2665','\u2763','\u2766','\u2767','\u2668','\u2618','\u270C','\u2728','\u2733','\u2734','\u2735','\u2736','\u2737','\u2738','\u2739','\u273A','\u273B','\u273C','\u273D','\u273E','\u2740','\u2741','\u2742','\u2743','\u2744','\u2745','\u2746','\u2747','\u2748','\u2749','\u274A','\u274B','\u10E6','\u2665','\u2764','\u2661','\u2762','\u2763']
+  },
+  {
+    cat: 'Arrows & Pointers',
+    s: ['\u2192','\u2190','\u2191','\u2193','\u2194','\u2195','\u21D0','\u21D2','\u21D4','\u21E6','\u21E7','\u21E8','\u21E9','\u27A1','\u2B05','\u2B06','\u2B07','\u27A4','\u27A5','\u27A6','\u27A7','\u27A8','\u27A9','\u2794','\u279C','\u27B5','\u2796','\u25B6','\u25C0','\u25B2','\u25BC','\u25B8','\u25C2','\u25B4','\u25BE','\u2023','\u203A','\u2039','\u00BB','\u00AB']
+  },
+  {
+    cat: 'Shapes & Symbols',
+    s: ['\u25C6','\u25C7','\u25C8','\u25C9','\u25CA','\u25CB','\u25CC','\u25CD','\u25CE','\u25CF','\u25D0','\u25D1','\u25D2','\u25D3','\u25E2','\u25E3','\u25E4','\u25E5','\u25B3','\u25B2','\u25B4','\u25B5','\u25B6','\u25B7','\u25B8','\u25B9','\u25BA','\u25BB','\u25BC','\u25BD','\u25BE','\u25BF','\u25C0','\u25C1','\u25C2','\u25C3','\u25A1','\u25A0','\u25A2','\u25A3','\u25A4','\u25A5','\u25A6','\u25A7','\u25A8','\u25A9','\u25AA','\u25AB']
+  },
+  {
+    cat: 'Misc & Special',
+    s: ['\u26A0','\u26D4','\u2762','\u2763','\u2764','\u2765','\u2766','\u2767','\u2756','\u2733','\u2734','\u2735','\u2736','\u2737','\u2738','\u2739','\u273A','\u273B','\u273C','\u273D','\u273E','\u273F','\u2740','\u2741','\u2742','\u2743','\u2744','\u2745','\u2746','\u2747','\u2748','\u2749','\u274A','\u274B','\u00A7','\u00B6','\u2020','\u2021','\u2030','\u2031','\u203B','\u2042','\u2047','\u2048','\u2049','\u204A','\u204B','\u204C','\u204D','\u204E','\u204F']
+  }
+];
+
+// Decorated name templates
+var DEC = [
+  function(n){return '\uA671'+n+'\uA672';},
+  function(n){return '\u2605'+n+'\u2605';},
+  function(n){return '\u4E17'+n+'\u4E17';},
+  function(n){return '\u4E42'+n+'\u4E42';},
+  function(n){return '\u300A'+n+'\u300B';},
+  function(n){return '\u265B'+n+'\u265B';},
+  function(n){return '\uA671\u2726'+n+'\u2726\uA672';},
+  function(n){return '\u300E'+n+'\u300F';},
+  function(n){return '\u26A1'+n+'\u26A1';},
+  function(n){return '\u2620'+n+'\u2620';},
+  function(n){return '\u5F61'+n+'\u5F61';},
+  function(n){return '\u2605\u5F61'+n+'\u5F61\u2605';},
+  function(n){return '\u3010'+n+'\u3011';},
+  function(n){return '\u2726'+n+'\u2726';},
+  function(n){return '\u2756'+n+'\u2756';},
+  function(n){return '\u27A4 '+n;},
+  function(n){return '\u2022 '+n+' \u2022';},
+  function(n){return '\u5350'+n+'\u5350';},
+  function(n){return '\u30C4'+n+'\u30C4';},
+  function(n){return '#'+n;},
+  function(n){return '\u00D7 '+n+' \u00D7';},
+  function(n){return '\u265A'+n+'\u265A';},
+  function(n){return '\u3008'+n+'\u3009';},
+  function(n){return '\u300C'+n+'\u300D';},
+  function(n){return '\u2694 '+n+' \u2694';},
+  function(n){return '\u2605\u2605 '+n+' \u2605\u2605';},
+  function(n){return '[ '+n+' ]';},
+  function(n){return '{ '+n+' }';},
+];
+
+// ============================================================
+// STATE & UTILS
+// ============================================================
+
+var favs = (function(){ try{ return JSON.parse(localStorage.getItem('gn_favs')||'[]')||[]; }catch(e){return [];} })();
+var curCat = 'all';
+var nickOffset = 0;
+var nickPool = [];
+var PAGESIZE = 24;
+var fontTimer = null;
+
+function saveFavs() { try{ localStorage.setItem('gn_favs', JSON.stringify(favs)); }catch(e){} }
+
+function rand(arr) { return arr[Math.floor(Math.random()*arr.length)]; }
+
+function shuffle(a) {
+  var b = a.slice();
+  for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t;}
+  return b;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function toast(msg) {
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(function(){ el.classList.remove('show'); }, 2200);
+}
+
+function copyText(text, btn) {
+  function done() {
+    toast('\u2705 Copied: ' + text.substring(0,24));
+    if (btn) {
+      var old = btn.textContent;
+      btn.textContent = 'Done!';
+      btn.classList.add('done');
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1600);
+    }
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(function(){
+      fbCopy(text, done);
+    });
+  } else { fbCopy(text, done); }
+}
+
+function fbCopy(t, cb) {
+  var ta = document.createElement('textarea');
+  ta.value = t;
+  ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try { document.execCommand('copy'); if(cb)cb(); } catch(e){ toast('Please copy manually'); }
+  document.body.removeChild(ta);
+}
+
+function updateFavCount() {
+  var el = document.getElementById('favCnt');
+  if(el) el.textContent = favs.length;
+  var fab = document.getElementById('fabBtn');
+  if(fab) fab.style.background = favs.length > 0 ? '#ef4444' : 'var(--blue)';
+}
+
+// Build result card — uses data-* attributes, NO inline JS strings
+function card(name, delay) {
+  delay = delay||0;
+  var inFav = favs.indexOf(name) !== -1;
+  var e = esc(name);
+  return '<div class="rc" style="animation-delay:'+delay+'ms">' +
+    '<span class="rn">'+e+'</span>' +
+    '<div class="ra">' +
+    '<button class="cp-btn" data-v="'+e+'">Copy</button>' +
+    '<button class="fv-btn'+(inFav?' on':'')+'" data-f="'+e+'">\u2665</button>' +
+    '</div></div>';
+}
+
+function fontCard(label, val, delay) {
+  delay = delay||0;
+  var e = esc(val);
+  return '<div class="fc" style="animation-delay:'+delay+'ms">' +
+    '<div class="fl">'+esc(label)+'</div>' +
+    '<div class="fv">'+e+'</div>' +
+    '<button class="cp-btn btn-sm" data-v="'+e+'">Copy</button>' +
+    '</div>';
+}
+
+// Global delegated event handler — handles ALL clicks safely
+document.addEventListener('click', function(e) {
+  // Copy button
+  var cb = e.target.closest ? e.target.closest('[data-v]') : null;
+  if (cb) { copyText(cb.getAttribute('data-v'), cb); return; }
+
+  // Favorite button
+  var fb = e.target.closest ? e.target.closest('[data-f]') : null;
+  if (fb) {
+    var nm = fb.getAttribute('data-f');
+    var idx = favs.indexOf(nm);
+    if(idx === -1){ favs.push(nm); toast('\u2764 Saved!'); fb.classList.add('on'); }
+    else { favs.splice(idx,1); toast('Removed from favorites'); fb.classList.remove('on'); }
+    saveFavs(); updateFavCount(); return;
+  }
+
+  // Symbol button
+  var sb = e.target.closest ? e.target.closest('[data-s]') : null;
+  if (sb) {
+    var sym = sb.getAttribute('data-s');
+    copyText(sym, null);
+    sb.style.background = 'var(--blueL)';
+    sb.style.borderColor = 'var(--blue)';
+    sb.style.transform = 'scale(1.2)';
+    setTimeout(function(){ sb.style.background=''; sb.style.borderColor=''; sb.style.transform=''; }, 500);
+    return;
+  }
+});
+
+// ============================================================
+// NICKNAME GENERATOR
+// ============================================================
+
+function buildNickPool(base, cat) {
+  var pool = [];
+  var cats = cat === 'all' ? ['cool','pro','dark','funny','stylish'] : [cat];
+  var i, j;
+
+  for (j = 0; j < cats.length; j++) {
+    var c = cats[j];
+    var d = NICK_DATA[c] || NICK_DATA.cool;
+    for (i = 0; i < 60; i++) pool.push(rand(d.pre) + rand(d.suf));
+  }
+
+  // Base word combos
+  var suf2 = NICK_DATA.cool.suf.concat(NICK_DATA.pro.suf);
+  for (i = 0; i < 50; i++) pool.push(rand(BASE) + rand(suf2));
+
+  // Named combos
+  if (base && base.length > 0) {
+    var up = base.charAt(0).toUpperCase() + base.slice(1).toLowerCase();
+    for (i = 0; i < NAME_SUFS.length; i++) {
+      pool.push(up + NAME_SUFS[i]);
+      pool.push(NAME_SUFS[i] + up);
+    }
+    pool.push(up+'X', up+'Z', up+'99', up+'007', up+'YT', up+'Pro', up+'GG');
+    pool.push('x'+up+'x', '_'+up+'_', up.toUpperCase());
+    pool.push(up+'Fire', up+'Ice', up+'God', up+'King', up+'Dark');
+  }
+
+  // Deduplicate
+  var seen = {}, res = [];
+  for (i = 0; i < pool.length; i++) {
+    var n = pool[i];
+    if (!seen[n] && n.length >= 4 && n.length <= 20) { seen[n]=1; res.push(n); }
+  }
+  return res;
+}
+
+function genNicknames() {
+  var base = document.getElementById('nickInp').value.trim();
+  nickPool = shuffle(buildNickPool(base, curCat));
+  nickOffset = 0;
+  renderNicks(true);
+}
+
+function renderNicks(reset) {
+  var cont = document.getElementById('nickRes');
+  var slice = nickPool.slice(0, nickOffset + PAGESIZE);
+  if (reset) cont.innerHTML = '';
+
+  if (slice.length === 0) {
+    cont.innerHTML = '<div class="empty"><div class="empty-ic">\uD83C\uDFAE</div><p>No names found. Try a different category!</p></div>';
+  } else {
+    cont.innerHTML = slice.map(function(n,i){ return card(n, i*18); }).join('');
+  }
+  nickOffset += PAGESIZE;
+  var more = document.getElementById('nickMore');
+  if (more) more.style.display = nickOffset < nickPool.length ? 'block' : 'none';
+}
+
+// ============================================================
+// FONT GENERATOR
+// ============================================================
+
+function genFonts() {
+  var raw = document.getElementById('fontInp').value.trim();
+  var inp = raw || 'GamerNick';
+  var note = document.getElementById('fontNote');
+  if (note) note.style.display = raw ? 'none' : 'block';
+
+  var cont = document.getElementById('fontRes');
+  var cards = [];
+
+  for (var i = 0; i < FONTS.length; i++) {
+    try {
+      var v = FONTS[i].fn(inp);
+      if (v && v !== inp) {
+        cards.push(fontCard(FONTS[i].name, v, i*12));
+      }
+    } catch(err) { /* skip broken style */ }
+  }
+
+  if (cards.length === 0) {
+    cont.innerHTML = '<div class="empty"><div class="empty-ic">\u2728</div><p>Type a name above to see font styles!</p></div>';
+  } else {
+    cont.innerHTML = cards.join('');
+  }
+}
+
+function genFontsLive() {
+  clearTimeout(fontTimer);
+  fontTimer = setTimeout(genFonts, 200);
+}
+
+// ============================================================
+// SYMBOL GENERATOR
+// ============================================================
+
+function buildSymbols() {
+  var cont = document.getElementById('symCats');
+  if (!cont) return;
+  var html = '';
+  for (var i = 0; i < SYMS.length; i++) {
+    var cat = SYMS[i];
+    var btns = '';
+    for (var j = 0; j < cat.s.length; j++) {
+      // Use data-s with unicode escape value
+      var sym = cat.s[j];
+      btns += '<button class="sb" data-s="'+esc(sym)+'" title="Copy">'+sym+'</button>';
+    }
+    html += '<div class="sym-block"><div class="sym-title">'+esc(cat.cat)+'</div><div class="sym-grid">'+btns+'</div></div>';
+  }
+  cont.innerHTML = html;
+}
+
+function genDecNames() {
+  var inp = document.getElementById('symInp').value.trim();
+  if (!inp) { toast('Please enter a name first!'); return; }
+  var cont = document.getElementById('decRes');
+  var html = '';
+  for (var i = 0; i < DEC.length; i++) {
+    try {
+      html += card(DEC[i](inp), i*30);
+    } catch(e) {}
+  }
+  cont.innerHTML = html || '<div class="empty"><p>Try a shorter name.</p></div>';
+}
+
+// ============================================================
+// CLAN GENERATOR
+// ============================================================
+
+function genClans() {
+  var inp = document.getElementById('clanInp').value.trim();
+  var game = document.getElementById('clanGame').value;
+  var pool = [];
+  var i;
+
+  for (i = 0; i < 45; i++) pool.push(rand(CLAN_PRE) + rand(CLAN_SUF));
+
+  var tags = game === 'all' ? GAME_TAGS.ff.concat(GAME_TAGS.pubg, GAME_TAGS.cod, GAME_TAGS.fn) : (GAME_TAGS[game] || []);
+  for (i = 0; i < tags.length; i++) pool.push(rand(CLAN_PRE) + tags[i]);
+
+  if (inp) {
+    var up = inp.charAt(0).toUpperCase() + inp.slice(1).toLowerCase();
+    for (i = 0; i < CLAN_SUF.length; i++) pool.push(up + CLAN_SUF[i]);
+    for (i = 0; i < CLAN_PRE.length && i < 10; i++) pool.push(CLAN_PRE[i] + up);
+  }
+
+  var seen = {}, res = [];
+  for (i = 0; i < pool.length; i++) {
+    if (!seen[pool[i]]) { seen[pool[i]]=1; res.push(pool[i]); }
+  }
+  res = shuffle(res).slice(0,40);
+
+  document.getElementById('clanRes').innerHTML = res.map(function(n,i){ return card(n,i*18); }).join('');
+}
+
+// ============================================================
+// HERO SECTION
+// ============================================================
+
+function genHero(type) {
+  var inp = document.getElementById('heroInp').value.trim();
+  var results = [];
+  var i;
+
+  if (type === 'random') {
+    for (i = 0; i < 12; i++) results.push(rand(BASE) + rand(NICK_DATA.cool.suf));
+  } else if (type === 'stylish') {
+    var base = inp || (rand(BASE) + rand(NICK_DATA.cool.suf));
+    var flist = shuffle(FONTS).slice(0,10);
+    for (i = 0; i < flist.length; i++) {
+      try { results.push(flist[i].fn(base)); } catch(e) { results.push(base); }
+    }
+  } else {
+    var pool = buildNickPool(inp, 'all');
+    results = shuffle(pool).slice(0,12);
+  }
+
+  var chips = '';
+  for (i = 0; i < results.length; i++) {
+    var e = esc(results[i]);
+    chips += '<div class="chip" style="animation-delay:'+(i*45)+'ms">' +
+      '<span class="chip-name">'+e+'</span>' +
+      '<button class="cp-btn btn-sm" data-v="'+e+'">Copy</button>' +
+      '</div>';
+  }
+
+  document.getElementById('heroRes').innerHTML = '<div class="hero-chips">'+chips+'</div>';
+}
+
+// ============================================================
+// FAVORITES
+// ============================================================
+
+function toggleFavs() {
+  var sec = document.getElementById('sec-fav');
+  if (favs.length === 0) { toast('No favorites yet! Tap \u2665 on any name.'); return; }
+  var hidden = !sec.style.display || sec.style.display === 'none';
+  sec.style.display = hidden ? 'block' : 'none';
+  if (hidden) {
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+    sec.querySelector('#favRes').innerHTML = favs.map(function(n,i){ return card(n,i*15); }).join('');
+  }
+}
+
+function clearFavs() {
+  favs.length = 0;
+  saveFavs(); updateFavCount();
+  document.getElementById('sec-fav').style.display = 'none';
+  toast('Favorites cleared!');
+}
+
+// ============================================================
+// NAV
+// ============================================================
+
+var ham = document.getElementById('ham');
+var navL = document.getElementById('navL');
+if (ham) ham.addEventListener('click', function(){ navL.classList.toggle('open'); });
+if (navL) {
+  var links = navL.querySelectorAll('.nav-link');
+  for (var li = 0; li < links.length; li++) {
+    links[li].addEventListener('click', function(){ navL.classList.remove('open'); });
+  }
+}
+
+window.addEventListener('scroll', function() {
+  var cur = 'home';
+  var secs = document.querySelectorAll('section[id], div.stats');
+  for (var si = 0; si < secs.length; si++) {
+    if (window.scrollY >= secs[si].offsetTop - 90) cur = secs[si].id || cur;
+  }
+  var nls = document.querySelectorAll('.nav-link');
+  for (var ni = 0; ni < nls.length; ni++) {
+    nls[ni].classList.toggle('active', nls[ni].getAttribute('href') === '#'+cur);
+  }
+}, {passive:true});
+
+// ============================================================
+// EVENT BINDINGS
+// ============================================================
+
+function bindBtn(id, fn) {
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('click', fn);
+}
+function bindEnter(id, fn) {
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('keydown', function(e){ if(e.key==='Enter') fn(); });
+}
+
+bindBtn('btn-nick',    function(){ genHero('nickname'); });
+bindBtn('btn-stylish', function(){ genHero('stylish'); });
+bindBtn('btn-random',  function(){ genHero('random'); });
+bindBtn('nickGenBtn',  genNicknames);
+bindBtn('fontGenBtn',  genFonts);
+bindBtn('symGenBtn',   genDecNames);
+bindBtn('clanGenBtn',  genClans);
+bindBtn('fabBtn',      toggleFavs);
+bindBtn('favClrBtn',   clearFavs);
+bindBtn('nickMoreBtn', function(){ renderNicks(false); });
+bindBtn('conBtn',      function(){ toast('\u2705 Message sent! (Demo mode)'); });
+
+// Pills
+var pills = document.querySelectorAll('#nickPills .pill');
+for (var pi = 0; pi < pills.length; pi++) {
+  (function(pill) {
+    pill.addEventListener('click', function() {
+      var allPills = document.querySelectorAll('#nickPills .pill');
+      for (var k = 0; k < allPills.length; k++) allPills[k].classList.remove('on');
+      pill.classList.add('on');
+      curCat = pill.getAttribute('data-cat');
+      var sel = document.getElementById('nickCat');
+      if (sel) sel.value = curCat;
+      genNicknames();
+    });
+  })(pills[pi]);
+}
+
+// Category select sync
+var nickCatSel = document.getElementById('nickCat');
+if (nickCatSel) {
+  nickCatSel.addEventListener('change', function() {
+    curCat = this.value;
+    var allPills = document.querySelectorAll('#nickPills .pill');
+    for (var k = 0; k < allPills.length; k++) {
+      allPills[k].classList.toggle('on', allPills[k].getAttribute('data-cat') === curCat);
+    }
+    genNicknames();
+  });
+}
+
+// Font live input
+var fontInp = document.getElementById('fontInp');
+if (fontInp) {
+  fontInp.addEventListener('input', genFontsLive);
+  fontInp.addEventListener('keydown', function(e){ if(e.key==='Enter') genFonts(); });
+}
+
+bindEnter('heroInp',  function(){ genHero('nickname'); });
+bindEnter('nickInp',  genNicknames);
+bindEnter('symInp',   genDecNames);
+bindEnter('clanInp',  genClans);
+
+// ============================================================
+// INIT
+// ============================================================
+
+function init() {
+  updateFavCount();
+  genNicknames();
+  genFonts();
+  buildSymbols();
+  genClans();
+}
+
+// Run when DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+</script>
+</body>
+</html>
